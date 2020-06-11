@@ -38,7 +38,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_picamera.py" />
-      <option name="PARAMETERS" value="--model detect.tflite --labels labelmap.txt" />
+      <option name="PARAMETERS" value="--model detect.tflite --labels labelmap.txt ." />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -66,10 +66,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="252" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585240754531">
+    <state x="552" y="252" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585804397422">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="552" y="252" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585240754531" />
+    <state x="552" y="252" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585804397422" />
     <state x="877" y="302" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1585239593965">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
@@ -78,22 +78,22 @@
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="877" y="352" key="FileChooserDialogImpl/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585239658984" />
-    <state width="2173" height="306" key="GridCell.Tab.0.bottom" timestamp="1585797365876">
+    <state width="2165" height="306" key="GridCell.Tab.0.bottom" timestamp="1586264781054">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state width="2173" height="306" key="GridCell.Tab.0.bottom/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585797365876" />
-    <state width="2173" height="306" key="GridCell.Tab.0.center" timestamp="1585797365876">
+    <state width="2165" height="306" key="GridCell.Tab.0.bottom/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1586264781054" />
+    <state width="2165" height="306" key="GridCell.Tab.0.center" timestamp="1586264781053">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state width="2173" height="306" key="GridCell.Tab.0.center/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585797365876" />
-    <state width="2173" height="306" key="GridCell.Tab.0.left" timestamp="1585797365874">
+    <state width="2165" height="306" key="GridCell.Tab.0.center/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1586264781053" />
+    <state width="2165" height="306" key="GridCell.Tab.0.left" timestamp="1586264781053">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state width="2173" height="306" key="GridCell.Tab.0.left/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585797365874" />
-    <state width="2173" height="306" key="GridCell.Tab.0.right" timestamp="1585797365876">
+    <state width="2165" height="306" key="GridCell.Tab.0.left/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1586264781053" />
+    <state width="2165" height="306" key="GridCell.Tab.0.right" timestamp="1586264781054">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state width="2173" height="306" key="GridCell.Tab.0.right/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585797365876" />
+    <state width="2165" height="306" key="GridCell.Tab.0.right/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1586264781054" />
     <state width="2173" height="409" key="GridCell.Tab.1.bottom" timestamp="1585248212360">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
@@ -110,10 +110,10 @@
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state width="2173" height="409" key="GridCell.Tab.1.right/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585248212359" />
-    <state x="793" y="421" key="com.intellij.ide.util.TipDialog" timestamp="1585793852775">
+    <state x="793" y="421" key="com.intellij.ide.util.TipDialog" timestamp="1589038809926">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="793" y="421" key="com.intellij.ide.util.TipDialog/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1585793852775" />
+    <state x="793" y="421" key="com.intellij.ide.util.TipDialog/0.0.2194.1194/3840.0.2194.1194@0.0.2194.1194" timestamp="1589038809926" />
     <state x="760" y="264" width="672" height="678" key="search.everywhere.popup" timestamp="1585797698802">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>

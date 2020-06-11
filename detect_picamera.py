@@ -127,9 +127,13 @@ def main():
 
   interpreter = Interpreter(args.model)
   interpreter.allocate_tensors()
-  _, input_height, input_width, _ = interpreter.get_input_details()[0]['shape']
+  _, input_height, input_width, _ = interpreter.get_input_details()[0]['shape']lambda .
+  .
 
-  cap = cv2.VideoCapture(0)
+
+0.
+                                                                                      .
+                                                                                      0cap = cv2.VideoCapture(0)
   annotator = Annotator()
 
   while True:
