@@ -54,7 +54,7 @@ def load_labels(path):
 def set_input_tensor(interpreter, image):
   """Sets the input tensor."""
   # a tensor is a vector within a matrix https://www.kdnuggets.com/2018/05/wtf-tensor.html  mkayy...
-  # so it just creates an empty tensor to populate later?
+  # so it just creates an empty tensor to populate later
   tensor_index = interpreter.get_input_details()[0]['index']
   input_tensor = interpreter.tensor(tensor_index)()[0]
   input_tensor[:, :] = image
@@ -62,7 +62,7 @@ def set_input_tensor(interpreter, image):
 
 def get_output_tensor(interpreter, index):
   """Returns the output tensor at the given index."""
-  #okay so get__output_details just says it return a list of output details  (whatever those are...)
+  #okay so get__output_details just says it return a list of output details
   output_details = interpreter.get_output_details()[index]
   tensor = np.squeeze(interpreter.get_tensor(output_details['index']))
   return tensor
@@ -71,17 +71,17 @@ def get_output_tensor(interpreter, index):
 def detect_objects(interpreter, image, threshold):
   """Returns a list of detection results, each a dictionary of object info."""
   set_input_tensor(interpreter, image)
-  interpreter.invoke() # so invoke is like .append? no... hm
+  interpreter.invoke()
 
   # Get all output details
-  boxes = get_output_tensor(interpreter, 0)  #so  second number is the index, i need some way of visualizing this
-  classes = get_output_tensor(interpreter, 1) # are boxes, classes, scores, count, labels? hm   no they are not labels dumba$$
+  boxes = get_output_tensor(interpreter, 0)
+  classes = get_output_tensor(interpreter, 1)
   scores = get_output_tensor(interpreter, 2)
   count = int(get_output_tensor(interpreter, 3))
 
   results = []
   for i in range(count):
-    if scores[i] >= threshold: # nope i don't get it...  :(   # kay i watched some videos that helped
+    if scores[i] >= threshold:
       result = {
           'bounding_box': boxes[i],  # this is the box it draws around the object
           'class_id': classes[i],  # this is the name of the object
@@ -108,11 +108,13 @@ def annotate_objects(annotator, image, results, labels):
                    '%s %.2f' % (labels[obj['class_id']], obj['score']))
 
 
-def main():
+def main(argslabels, argsmodel,argsthreshold=0.4):
+  '''
   parser = argparse.ArgumentParser(
       formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  
   parser.add_argument(
-      '--model', help='File path of .tflite file.', required=True)  # i get an error in the labels and models i forgot how we changed those last time
+      '--model', help='File path of .tflite file.', required=True)
   parser.add_argument(
       '--labels', help='File path of labels file.', required=True)
   parser.add_argument(
@@ -122,18 +124,15 @@ def main():
       type=float,
       default=0.4)
   args = parser.parse_args()
+  '''
+  
+  labels = load_labels(argslabels)
 
-  labels = load_labels(args.labels)
-
-  interpreter = Interpreter(args.model)
+  interpreter = Interpreter(argsmodel)
   interpreter.allocate_tensors()
-  _, input_height, input_width, _ = interpreter.get_input_details()[0]['shape']lambda .
-  .
+  _, input_height, input_width, _ = interpreter.get_input_details()[0]['shape']
 
-
-0.
-                                                                                      .
-                                                                                      0cap = cv2.VideoCapture(0)
+  cap = cv2.VideoCapture(0)
   annotator = Annotator()
 
   while True:
@@ -141,7 +140,7 @@ def main():
     image = Image.fromarray(frame).convert('RGB').resize((input_width, input_height), Image.ANTIALIAS)
 
     start_time = time.time()
-    results = detect_objects(interpreter, image, args.threshold)
+    results = detect_objects(interpreter, image, argsthreshold)
     elapsed_ms = (time.time() - start_time) * 1000
     annotate_objects(annotator, frame, results, labels)
     annotator.text(frame,[5, 30], '%.1fms' % (elapsed_ms))
